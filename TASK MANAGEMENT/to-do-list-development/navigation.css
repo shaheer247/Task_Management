@@ -1,0 +1,25 @@
+
+body{
+    margin: 0;
+    position: relative;
+    transition: all 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+   
+}
+   .navbar{
+    background-color:  #005366;
+    display:flex;
+    justify-content: space-evenly;
+    text-align: center;
+    
+   }
+   .collapse navbar-collapse{
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+   }
+   .footer{
+    background-color: #005366;
+    color: white;
+   }
+    

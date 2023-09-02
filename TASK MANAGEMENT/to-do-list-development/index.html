@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" darkmode="false">
+
+<head>
+    
+
+  
+    <!-- Bootstrap CSS -->
+  
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Bootstrap Font Icon CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+  
+  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="shortcut icon" href="assets/svg/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/library.css">
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/mobile.css">
+    <script defer src="assets/js/create-task.js"></script>
+    <script defer src="assets/js/script.js"></script>
+    <script defer src="assets/js/load-todolist.js" id="load-todolist"></script>
+    <script defer src="assets/js/edit-account.js"></script>
+    <script defer src="assets/js/create-list.js"></script>
+    <script defer src="assets/js/setting.js"></script>
+    <script defer src="assets/js/about-project.js"></script>
+    <link rel="stylesheet" href="navigation.css">
+    
+  <!-- Bootstrap CSS -->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<!-- Bootstrap Font Icon CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+
+</head>
+
+<body>
+     <!---navbar starts-->
+
+  <nav class="navbar navbar-expand-lg navbar-dark ">
+    <a class="navbar-brand" href="#">ToDo</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+     
+
+
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact Us</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+      </form>
+      <div class="mx-2">
+
+        <button class="btn btn-light" data-toggle="modal" data-target="#loginModal">Login</button>
+        <button class="btn btn-light" data-toggle="modal" data-target="#signupModal">SignUp</button>
+      </div>
+    </div>
+  </nav>
+
+
+  <!---navbar ends-->
+  
+  <!-- Login Modal -->
+
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Login to ToDo</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sign Up Modal -->
+
+  <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Get an ToDo Account</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="form-group">
+              <label for="cexampleInputPassword1">Confirm Password</label>
+              <input type="password" class="form-control" id="cexampleInputPassword1">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Create Account</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+    <!--content starts-->
+        
+    <header id="header">
+        <div id="header_gradient">
+            <h1 id="time" class="time_stats">00:00</h1>
+            <h3 id="date" class="time_stats">Day, Month 00</h3>
+        </div>
+    </header>
+    <main id="main_container">
+        <section id="list_section">
+            <div id="account_container">
+                <div id="account_profile"></div>
+                <i class="setting_edit_user_btn" title="Edit profile"></i>
+                <div id="user_container">
+                    <p id="greetings">Greetings</p>
+                    <b id="username">Username</b>
+                </div>
+                <label for="menu_btn_checkbox" id="menu_btn" class="i icon_btns" title="Menu">&#xe700;<input type="checkbox" id="menu_btn_checkbox" name="menu_btn_checkbox"></label>
+            </div>
+            <div class="line_dividerX mobile_menu_line"></div>
+            <div id="list_container" class="mobile_menu">
+                <div class="empty_data_hint">List display here</div>
+            </div>
+            <div class="line_dividerX mobile_menu_line"></div>
+            <div id="list_footer_container" class="mobile_menu">
+                <div class="list_footer_group">
+                
+                    <i id="about_project" class="icon_btns" title="About project">&#xe946;</i>
+                </div>
+                <div class="list_footer_group"><button type="button" id="add_list_btn">Add a list</button></div>
+            </div>
+        </section>
+        <section id="todo_section" class="flex">
+            <p class="empty_data_hint">
+                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M34.25 3.03109L55.9628 15.567C57.3551 16.3708 58.2128 17.8564 58.2128 19.4641V44.5359C58.2128 46.1436 57.3551 47.6292 55.9628 48.433L34.25 60.9689C32.8577 61.7728 31.1423 61.7728 29.75 60.9689L8.03719 48.433C6.64488 47.6292 5.78719 46.1436 5.78719 44.5359V19.4641C5.78719 17.8564 6.64488 16.3708 8.03719 15.567L29.75 3.03109C31.1423 2.22724 32.8577 2.22724 34.25 3.03109Z" stroke="var(--textTransparent)" stroke-width="3"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M43.5772 20.7071C43.1867 20.3166 42.5535 20.3166 42.163 20.7071L28.7279 34.1421L22.364 27.7782C21.9735 27.3877 21.3403 27.3877 20.9498 27.7782L16.7071 32.0208C16.3166 32.4113 16.3166 33.0445 16.7071 33.435L23.7782 40.5061L28.0208 44.7487C28.0697 44.7976 28.1223 44.8403 28.1777 44.8769C28.5659 45.1332 29.0933 45.0904 29.4351 44.7487L33.6777 40.5061C33.6788 40.505 33.6799 40.5039 33.681 40.5028L47.8198 26.364C48.2104 25.9734 48.2104 25.3403 47.8198 24.9497L43.5772 20.7071Z" fill="var(--textTransparent)"/>
+                </svg> Start listing your to do and be productive.
+                <button type="button" id="add_list_btn2">Create new list</button>
+            </p>
+        </section>
+    </main>
+    
+    
+    <!--  Footer  -->
+<div class="footer">
+    <footer class="py-5 text-center text-body-secondary bg-body-tertiary text-white bg-dark">
+        <p>ToDo <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="">@Coding Hustlers</a>.</p>
+        <p class="mb-0">
+          <a href="#">Back to top</a>
+        </p>
+      </footer>
+      </div>
+   
+    
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
